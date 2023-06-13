@@ -18,7 +18,7 @@ export async function searchBooksByAuthor(req, res, next) {
   next();
 }
 
-export async function getBooks(req, res) {
+export async function getUsers(req, res) {
   const books = await bookModel.getBooks();
   res.json({ success: true, payload: books });
 }
