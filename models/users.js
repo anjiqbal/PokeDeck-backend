@@ -43,7 +43,7 @@ export async function getProfileFromUser(id) {
 
 // Get * from decks where id = $1 -- handled in decks 
 
-/*
+
 
 export async function getDeckFromUser(id) {
   // Query the database and return the deck with a matching id
@@ -51,7 +51,7 @@ export async function getDeckFromUser(id) {
   const query = `SELECT deck from users WHERE id = $1`;
   const result = await pool.query(query, values);
   return result.rows;
-} */
+} 
 
 // Get * from wishlist where id = $1 -- handled in wishlist 
 

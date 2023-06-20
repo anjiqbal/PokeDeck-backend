@@ -2,10 +2,10 @@
 
 import * as userModel from "../models/users";
 
-export async function searchBooksByTitle(req, res, next) {
+export async function getDeckFromUser(req, res, next) {
   if (req.query.title !== undefined) {
-    const books = await bookModel.searchBooksByTitle(req.query.title);
-    return res.json({ success: true, payload: books });
+    const decks = await userModel.searchBooksByTitle(req.query.user_id);
+    return res.json({ success: true, payload: decks });
   }
   next();
 }
